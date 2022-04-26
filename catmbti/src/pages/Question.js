@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { ProgressBar, Button } from 'react-bootstrap'
 import { QuestionData } from '../asset/data/questionData'
-import { useNavigate } from 'react-router-dom'
+import { createSearchParams, useNavigate } from 'react-router-dom'
 
 
 const Question = () => {
@@ -24,8 +24,19 @@ const Question = () => {
         if(QuestionData.length !== questionNo +1){
             setQuestionNo(questionNo + 1)
         } else {
+            // mbti 도출
+            const mbti = newScore.reduce(
+                (acc,curr)=>
+                acc + (curr.score >= 2 ? curr.id.substring(0,1) : curr.id.substring(1,2)), ""
+            )
+            console.log("mbti "+mbti)
             // 결과 페이지로 넘기자 
-            navigate('/result')
+            navigate({
+                pathname : '/result',
+                search : `?${createSearchParams({
+                    mbti: mbti
+                })}`
+            })
         }
         console.log("newScore", newScore)
         // if (type === "EI"){

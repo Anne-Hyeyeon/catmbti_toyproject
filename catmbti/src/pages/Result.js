@@ -1,22 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
-import CatImage from '../asset/cat_image.jpg'
 import Button from 'react-bootstrap/Button'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useSearchParams } from 'react-router-dom'
 import { ResultData } from '../asset/data/resultdata'
 
 
 const Result = () => {
     const navigate = useNavigate()
+    const [searchParams] = useSearchParams()
+    const mbti = searchParams.get('mbti')
+    const [resultdata,setResultData] = React.useState({})
+    React.useEffect(()=>{
+        const result = ResultData.find((s)=>s.best === mbti)
+        setResultData(result)
+    },[mbti])
+    console.log(resultdata)
     return(
         <Wrapper>
         <Header>예비집사 판별기</Header>
         <Contents>
             <Title>결과 보기</Title>
             <LogoImage>
-            <img src={ResultData[0].image} className="rounded-circle" width={350} height={350} />
+            <img src={resultdata.image} className="rounded-circle" width={350} height={350} />
             </LogoImage>
-            <Desc>예비 집사님과 찰떡궁합인 고양이는 {ResultData[0].name}입니다.</Desc>
+            <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultdata.name}입니다.</Desc>
+            <Desc2>예비 집사님과 찰떡궁합인 고양이는 {resultdata.desc}</Desc2>
             <Button onClick={()=>navigate('/')} style={{ fontFamily :'EliceDigitalBaeum-Bd', marginTop :'20px' }}>테스트 다시하기</Button>
         </Contents>
     </Wrapper>
@@ -57,4 +65,9 @@ const LogoImage = styled.div`
 const Desc = styled.div`
     font-size: 20pt;
     margin-top: 20px;
+`
+
+const Desc2 = styled.div`
+    font-size: 15pt;
+    margin: 20px 20px;
 `
