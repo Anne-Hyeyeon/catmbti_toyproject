@@ -19,7 +19,7 @@ const Home = () => {
                 <img src={CatImage} className="rounded-circle" width={350} height={350} />
                 </LogoImage>
                 <Desc>MBTI를 기본으로 하는 나랑 잘 맞는 고양이 찾기</Desc>
-                <Button style={{ fontFamily :'EliceDigitalBaeum-Bd' }} onClick={handleClickButton}>테스트 시작하기</Button>
+                <Button style={{ fontFamily :'EliceDigitalBaeum-Bd' ,marginTop :'20px'}} onClick={handleClickButton}>테스트 시작하기</Button>
             </Contents>
         </Wrapper>
     )
