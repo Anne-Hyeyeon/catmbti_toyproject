@@ -5,7 +5,6 @@ const { Kakao } = window
   const KakaoShareButton = ({ data }) => {
   const url = "https://catmbti7186.netlify.app/"
   const resultUrl = window.location.href
-  console.log('URL', url, resultUrl)
   React.useEffect(()=> {
     Kakao.cleanup()
     Kakao.init("17695de032cdd95d9e58fd039c5e0880")
@@ -19,7 +18,7 @@ const { Kakao } = window
         imageUrl: url + data.image,
         link: {
           mobileWebUrl: resultUrl,
-          webURL : resultUrl,
+          webUrl : resultUrl,
           androidExecutionParams: 'test',
         },
       },
@@ -39,7 +38,7 @@ const { Kakao } = window
           title: '나도 테스트 하러가기',
           link: {
             mobileWebUrl: url,
-            webURl: url
+            webUrl: url
           },
         },
       ]
