@@ -21,7 +21,7 @@ const Result = () => {
         <Contents>
             <Title>결과 보기</Title>
             <LogoImage>
-            <img src={resultdata.image} className="rounded-circle" width={350} height={350} />
+            <img src={resultdata.image} className="rounded-circle" width={350} height={350} alt="resultcat" />
             </LogoImage>
             <Desc>예비 집사님과 찰떡궁합인 고양이는 {resultdata.name}입니다.</Desc>
             <Desc2>예비 집사님과 찰떡궁합인 고양이는 {resultdata.desc}</Desc2>
