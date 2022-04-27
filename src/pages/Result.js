@@ -27,7 +27,7 @@ const Result = () => {
             <Desc2>예비 집사님과 찰떡궁합인 고양이는 {resultdata.desc}</Desc2>
             <ButtonGroup>
             <Button onClick={()=>navigate('/')} style={{ fontFamily :'EliceDigitalBaeum-Bd', marginTop :'20px' }}>테스트 다시하기</Button>
-            <KakaoShareButton />
+            <KakaoShareButton data={resultdata} />
             </ButtonGroup>
         </Contents>
     </Wrapper>
