@@ -22,17 +22,17 @@ const { Kakao } = window
           androidExecutionParams: 'test',
         },
       },
-      itemContent: {
-        profileText: 'Kakao',
-        profileImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-        titleImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-        titleImageText: 'Cheese cake',
-        titleImageCategory: 'Cake',
-        items: [
-        ],
-        sum: '총 결제금액',
-        sumOp: '15000원',
-      },
+      // itemContent: {
+      //   profileText: 'Kakao',
+      //   profileImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+      //   titleImageUrl: 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+      //   titleImageText: 'Cheese cake',
+      //   titleImageCategory: 'Cake',
+      //   items: [
+      //   ],
+      //   sum: '총 결제금액',
+      //   sumOp: '15000원',
+      // },
       buttons: [
         {
           title: '나도 테스트 하러가기',
