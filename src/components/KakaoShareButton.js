@@ -2,9 +2,9 @@ import Button from 'react-bootstrap/Button'
 import React from "react";
 const { Kakao } = window
 
-const KakaoShareButton = () => {
-  const url = "https://catmbti7186.netlify.app/"
-  const resultURL = window.location.href
+  const KakaoShareButton = () => {
+  // const url = "https://catmbti7186.netlify.app/"
+  // const resultURL = window.location.href
 
   React.useEffect(()=> {
     Kakao.cleanup()
